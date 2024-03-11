@@ -1,0 +1,109 @@
+body {
+  background-color: #A4CAB3	 ;
+  color:black
+}
+
+*{
+  box-sizing:border-box;
+}
+
+main {
+ max-width: 250px;
+ margin: 45px auto;
+}
+
+form {
+  border: 2px solid #A52A2A;
+  border-radius: 15px ;
+  padding: 5px ;
+  display: flex ;
+}
+
+form input[type="text"]{
+  background: none ;
+  color: black;
+  border: 0 ;
+  padding: 0px 10px ;
+  width: 100% ;
+}
+
+form button{
+  background-color: #a73535 ;
+  border: 0px ;
+  border-radius: 6px ;
+  cursor: pointer ; 
+}
+
+div.task{
+  background-color: #A52A2A;
+  border-radius: 15px;
+  padding: 5px 10px;
+  margin-top: 4px;
+  display:flex;
+  align-items: center;
+  transition: opacity .2s linear;
+ 
+}
+div.task svg{
+  height: 20px;
+  margin-right: 2px;
+  fill:#30D5C8;
+}
+div.task.done{
+  opacity: 0.6;
+}
+div.nametask{
+  flex-grow:1;
+}
+div.task span{
+  position: relative;
+ 
+}
+div.task span:before{
+  content:'';
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color:black ;
+  position: absolute;
+  top:12px;
+  transition: width .1s linear;
+  
+}
+div.task.done span::before{
+  width: 100%;
+}
+h1{
+
+  text-align: center;
+  font-family: "Times New Roman";
+}
+p{
+
+  text-align: center;
+  font-family: "Times New Roman";
+}
+div.BoxUnchecked{
+  display: flex;
+  align-items: center;
+  cursor:pointer;
+}
+div.BoxChecked{
+  display: flex;
+  align-items: center;
+  cursor:pointer;
+}
+button.ban {
+  background: none;
+  border:none;
+  display:flex;
+  cursor:pointer;
+}
+button.ban svg{
+  fill: rgb(150, 148, 148);
+  height:15px
+}
+
+div.task:hover {
+  transform: scale(1.1);
+}
